@@ -12,7 +12,7 @@ include(CheckIncludeFile)
 include(CheckSymbolExists)
 
 set(LIBS_REQUIRED picoxnet)
-set(HEADERS_REQUIRED picoxnet.h vunet.h nlinline.h)
+set(HEADERS_REQUIRED picoxnet.h vunet.h nlinline.h strcase.h)
 set(CMAKE_REQUIRED_QUIET TRUE)
 set(CMAKE_REQUIRED_LIBRARIES slirp)
 
@@ -39,6 +39,9 @@ target_link_libraries(vunetpicox -lpicoxnet)
 set_target_properties(vunetpicox PROPERTIES PREFIX "")
 
 install(TARGETS vunetpicox DESTINATION ${CMAKE_INSTALL_LIBDIR}/vu/modules)
+
+add_executable(iplink iplink.c)
+install(TARGETS iplink DESTINATION ${CMAKE_INSTALL_BINDIR})
 
 #add_subdirectory(man)
 
