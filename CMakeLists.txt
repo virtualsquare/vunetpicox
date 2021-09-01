@@ -34,7 +34,7 @@ add_definitions(-D_GNU_SOURCE)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 add_library(vunetpicox SHARED vunetpicox.c)
-target_link_libraries(vunetpicox -lpicoxnet)
+target_link_libraries(vunetpicox picoxnet)
 
 set_target_properties(vunetpicox PROPERTIES PREFIX "")
 
