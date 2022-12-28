@@ -40,9 +40,6 @@ set_target_properties(vunetpicox PROPERTIES PREFIX "")
 
 install(TARGETS vunetpicox DESTINATION ${CMAKE_INSTALL_LIBDIR}/vu/modules)
 
-add_executable(iplink iplink.c)
-install(TARGETS iplink DESTINATION ${CMAKE_INSTALL_BINDIR})
-
 add_subdirectory(man)
 
 add_custom_target(uninstall
